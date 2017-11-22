@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Bootstrap</title>
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.css"/>
@@ -21,49 +21,77 @@ and open the template in the editor.
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-
     </head>
-
+    
     <body>
-
-
         <style>
-            
-            #nave{
-                text-align: justify;
-            }
-          
-            .card{
-                margin:0 auto;
-                padding:20px;
-                color:red;
-            }
-          
-            
-            #sobre{
-                text-align: justify;
-              
+            /* 
+            seletor {
+                    propriedade: valor;
             }
             
-            #paginaprincipal{
-                background-color: red;
+            Como formatar as tags:
+            tag{...}
+            .classe{...} --> basta utilizar a propriedade class="nome" nas tags
+            #id{...} --> para formatar algo com ID �nico
+            
+            */
+            body {
+                /* Define um fundo, pode ser uma imagem ou cor */
+                background: #dddddd;
+                /* Tipo da fonte */
+                font-family: Calibri;
+                /* Cor da fonte */
+                color: #333333;
+            }
+            .titulo{
+                /* Tamanho da font */
+                font-size: 12pt;
+                /* Negrito ou n�o */
+                font-weight: bold;
+            }
+            .botao{
+                background: #2494FF;
+                color: #FFFFFF;
+                padding: 10px 20px;
+                border: none;
+            }
+            .campo{
+                border-left-color: #AAAAAA;
+                border-width: 0px 0px 0px 5px;              
+                background: #FFFFFF;
+                padding: 10px 3px;
+            }
+            h2{
+                border-left-color: #2494FF;
+                border-left-width: 5px;
+                border-left-style: solid;
+                padding-left: 5px;
+                
+                border-bottom-color: #2494FF;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+            }
+            #conteudo{
+                background: #EEEEEE;
+                border-color: #AAAAAA;
+                border-style: solid;
+                border-width: 1px;
+                
+                width: 500px;
+                margin: 10px auto;
+                padding: 15px;
+            }
+            
+            .center{
+                text-align: center;
             }
         </style>
-        <script>
 
-
-            $(document).ready(function(){
-
-  $("#hide").click(function(){
-        $("p").hide();
-    });
-
-});
-
-
-        </script>
         
-        <div class="container">
+        <div>
+            
+          
          
             
                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -79,7 +107,7 @@ and open the template in the editor.
 
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-                    <a class="navbar-brand" href="#">Negocie.com</a>
+                    <a class="navbar-brand" href="index.html">Negocie.com</a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -98,9 +126,6 @@ and open the template in the editor.
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              Computador
                                 </a>
-                             
-                             
-                             
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Computador</a>  <a class="dropdown-item" href="#">Placa de video</a>
@@ -116,6 +141,7 @@ and open the template in the editor.
                                     
                                      
                                    <div class="dropdown-divider"></div>
+                                   
                                 
                                    
                                 </div>
@@ -126,6 +152,7 @@ and open the template in the editor.
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                     <a class="dropdown-item" href="entrar.html">Carrinho</a>
                                     <a class="dropdown-item" href="entrar.html">Entrar</a>
                                     <a class="dropdown-item" href="cadastro.html">Criar Conta</a>
                                     
@@ -136,14 +163,15 @@ and open the template in the editor.
 
                             </li>
 
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              Carrinho
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="carrinho.html">Adicionar</a>
-                                    <a class="dropdown-item" href="">Ver meus produtos</a>
+                                    <a class="dropdown-item" href="index.html">Adicionar</a>
+                                    <a class="dropdown-item" href="cadastro.html">Ver meus produtos</a>
                                     
                                      
                                    <div class="dropdown-divider"></div>
@@ -151,6 +179,7 @@ and open the template in the editor.
                                 </div>
 
                             </li>
+                            
 
                         </ul>
 
@@ -158,7 +187,6 @@ and open the template in the editor.
                             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar Produtos" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
                         </form>
-                        
 
                     </div>
 
@@ -173,149 +201,19 @@ and open the template in the editor.
         
             
            
-   <div class="card-deck">
-       
-    
-            <div class='col-3'>
-      <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active">
-    Computador
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">Placa de video</a>
-  <a href="#" class="list-group-item list-group-item-action">Processador</a>
-  <a href="#" class="list-group-item list-group-item-action">fonte</a>
-  <a href="#" class="list-group-item list-group-item-action">Gabinete</a>
-   <a href="#" class="list-group-item list-group-item-action">Caixa de Som</a>
-    <a href="#" class="list-group-item list-group-item-action">Mouse</a>
-     <a href="#" class="list-group-item list-group-item-action">Teclado</a>
-       <a href="#" class="list-group-item list-group-item-action">HD</a>
-         <a href="#" class="list-group-item list-group-item-action">Memoria Ram</a>
-      <a href="#" class="list-group-item list-group-item-action">Monitor</a>
-</div>
-  
-            
-                
-                
-                
-            </div>
-            
-       <div>
-           
-       </div>
-       
-  <div class="card">
-    <img class="card-img-top" src="pcg1.webp" alt="Card image cap" height="280" width="160">
-    <div class="card-body">
-      <h4 class="card-title">Computador Gamer Completo</h4>
-      
-    </div>
-    <div class="card-footer">
- <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="pa3.webp" alt="Card image cap" height="280" width="160">
-    <div class="card-body">
-      <h4 class="card-title">GEFORCE GTX 1050 Ti 4GB</h4>
-    
-    </div>
-    <div class="card-footer">
-     <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
-    </div>
-  </div>
-                    
-                    
-  <div class="card">
-      <img class="card-img-top" src="pcg4.webp" alt="Card image cap" height="280" width="260">
-    <div class="card-body">
-      <h4 class="card-title">Processador Core i7 7700K</h4>
-      
-    </div>
-    <div class="card-footer">
-    <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
-    </div>
-  </div>
-                    
-                    
-          <div class="card">
-      <img class="card-img-top" src="pcg3.webp" alt="Card image cap" height="280" width="160">
-    <div class="card-body">
-      <h4 class="card-title">Processador Core i7 7700K</h4>
-    </div>
-    <div class="card-footer">
-    <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
-    </div>
-  </div>
-               
-            
-                    
-                    
-                    
-</div>
+
                   
+     
+
+
+            
+            
+            
+        </div>
+                         
+                         <br>
+                         <br>
         
-
-            
-    
-            <br>
-            <br>
-            
-            
-            
-            <div id='nave'>
-                <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-            </div>  
-
-                
-        <div id="sobre">
-            
-            <table class="table table-striped table-dark">
-  <thead>
-    
-      <th scope="col">Sobre-nós</th>
-      <th scope="col">Atendimento</th>
-      <th scope="col">Pagamento</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      
-      <td>Negocie.com é um site onde as pessoas
-          poderão fazer compras,vendas e trocas
-          de produtos usados ou novos de acordo,
-                  com suas nescedidades.</td>
-      <td>Atendemos de Segunda a sexta das 9:00
-          da manhã as 21:00 da noite através do
-          suporte remoto utilizando o Team viwer.</td>
-      <td>O site aceita todos os tipos de cartões
-          porém a forma de pagamento será definida 
-          entre o vendedor e o comprador.
-                        </td>
-    </tr>
-   
-  </tbody>
-</table>
-                    </div>
-
         
     </body>
 </html>
-
