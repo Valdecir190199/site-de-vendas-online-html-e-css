@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
+  lue: #007bff--i--i--i;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -5495,6 +5495,18 @@ button.close {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+
+.my-2 {
+
+}
+
+.sr-only {
+
+}
+
+.my-sm-0 {
+
+}
 }
 
 .carousel-item-next,
